@@ -10,20 +10,20 @@
     elevation="8"
     
   >
-    <v-slide-group v-model="model" 
+
+    <!-- <v-slide-group v-model="model" 
       class="">
-       <v-slide-group-item v-for="item in items" :key="item.id" >
-      
-        <v-card
-          class="p-card  ma-12"
-          elevation="10"
-          width="300"
-          height="400"
-          tile
-          style="background-color: transparent"
+       <v-slide-group-item v-for="item in items" :key="item.id" > -->
+      <marquee BEHAVIOR=scroll  WIDTH="100%"  scrollamount="5"  >
+        <div class="d-flex">
+        <v-card 
+          class="p-card  ma-12 "
+          elevation="10" 
+          style="background-color: transparent" v-for="item in items" :key="item.id"
         >
-          <v-list-item-avatar height="100px" width="100px">
-            <v-img :src="item.img"></v-img>
+        
+          <v-list-item-avatar class="r-avatar " height="100px" width="100px">
+            <v-img :src="item.img" ></v-img>
           </v-list-item-avatar>
           <div>
             <i class="fa-solid fa-star md-5"></i>
@@ -44,14 +44,28 @@
             <v-icon color="blue"> fa-quote-right</v-icon></v-card-text
           >
         </v-card>
-        
+        <v-card class="p-card  ma-12 "
+          elevation="10"
+          
+          style="background-color: transparent">
+          <v-img src="../assets/testimonial-twitter1.jpeg" style = "max-height:50vh"></v-img>
+          </v-card>
+           <v-card class="p-card  ma-12 "
+          elevation="10"
+          
+          style="background-color: transparent">
+          <v-img src="../assets/testimonial-twitter2.jpeg" style = "max-height:55vh"></v-img>
+          </v-card>
+        </div>
+      </marquee>
       
-       </v-slide-group-item>
-    </v-slide-group>
+       <!-- </v-slide-group-item>
+    </v-slide-group> -->
     </v-sheet>
   </div>
 </template>
 <script>
+
 export default {
   data: () => ({
     items: [
@@ -76,15 +90,10 @@ export default {
         testimonial:
           "Prediction of Swing well before anyone's prediction is amazing and gives you good RR.Thanks and best wishes @RocketStockPicks",
       },
-      {
-        id: "3",
-        name: "Mr. Sinha (LIC)",
-        img: require("../assets/Sinha.png"),
-        testimonial:
-          "Prediction of Swing well before anyone's prediction is amazing and gives you good RR.Thanks and best wishes @RocketStockPicks",
-      },
+     
     ],
   }),
+  
 };
 </script>
 
@@ -150,7 +159,11 @@ export default {
 .p-description {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 18px;
-  text-align: center;
+  text-align: left;
+  justify-content: safe;
+  align-items: center;
+  max-width: 95%;
+  padding-right: 10px;
 }
 .v-card__text {
   color: white;
@@ -158,5 +171,18 @@ export default {
 i {
   color: #ffa534;
   margin-left: 2%;
+}
+.p-card{
+  min-width: 450px;
+  min-height: 500px;
+  max-width: 450px;
+  width: 500px;
+}
+.r-avatar{
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  
 }
 </style>

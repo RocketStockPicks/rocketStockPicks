@@ -1,11 +1,11 @@
 <template>
   <div class="containers">
+    <div >
     <v-btn class="mx-2" large style="color: white" text> <h3>Home</h3> </v-btn>
     <v-btn @click="scrollItem('about-us')" class="nav-btn"  style="color: white" text> <h3>About</h3> </v-btn>
-     <v-btn style="color: white" text> <h3>Success Stories</h3> </v-btn>
-    <v-btn style="color: white" text> <h3>CONTACT</h3> </v-btn>
+    </div>
     <div class="nav-bar">
-      <img class="rocket-image" src="../assets/rocker-logo.gif" />
+      <img class="rocket-image" src="../assets/up.gif" />
     </div>
   </div>
 </template>
@@ -32,6 +32,8 @@ const el = document.getElementById(ref);
   background-color: black;
   background-size: cover;
   justify-content: center;
+  
+  
 }
 
 .main-contents {
@@ -49,5 +51,6 @@ const el = document.getElementById(ref);
 .nav-btn{
 transform-style: flat;
 }
+
 
 </style> 

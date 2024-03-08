@@ -2,7 +2,7 @@
 
   <v-container  class="lighten-5" >
     <div class="content" >
-    <h2 class="lighten-5" style="color:black;margin-bottom:2%;margin-top:2%">WHAT YOU EXPECT FROM US</h2>
+    <h2 class="lighten-5" style="color:black;margin-bottom:2%;margin-top:2%">SET YOUR EXPECTATIONS RIGHT</h2>
     <v-divider></v-divider>
     <v-row max-width="100%" >
       <v-col cols="12" sm="6">
@@ -13,31 +13,32 @@
               class="text-black"
               v-for="item in items"
               :key="item.expected"
+             :v-if="item.expected != null"
             >
-              <v-list-item-icon style="margin-right:0%">
-                <v-icon color="green"> fa fa-flag</v-icon>
+              <v-list-item-icon  v-if="item.expected != null" style="margin-left:0%">
+               <i class="fa-solid fa-check"></i>
               </v-list-item-icon>
               <v-list-item-content style="margin-left:0%">
-                <v-list-item-title>{{ item.expected }}</v-list-item-title>
+                <v-list-item-title class="text-wrap text-left">{{ item.expected }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" >
-        <v-card class="mx-auto" max-width="100%" tile>
+        <v-card class="mx-auto" max-width="100%" min-height="100%" tile>
           <v-list lines="two">
             <h3 class="align-left" style="color:orange;"> WHAT NOT TO EXPECT</h3>
             <v-list-item
               class="text-black"
               v-for="item in items"
-              :key="item.expected"
+              :key="item.unexpected"
             >
               <v-list-item-icon style="margin-left:0%"> 
-                <v-icon color="red" > fa fa-flag</v-icon>
+               <i class="fa-solid fa-xmark"></i>
               </v-list-item-icon>
               <v-list-item-content style="margin-left:0%">
-                <v-list-item-title class="align-left"> {{ item.unexpected }}</v-list-item-title>
+                <v-list-item-title class="text-left text-wrap"> {{ item.unexpected }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -60,28 +61,27 @@ export default {
       items: [
         {
           expected:
-            "Focus on learning price-action and simple trading strategy 1",
+            "Focus on learning price-action and simple trading strategies",
           unexpected: "No Portfolio Management at any stage ",
         },
         {
           expected:
-            "Focus on learning price-action and simple trading strategy 2",
-          unexpected: "No Portfolio Management at any stage ",
+            "Our views on selected Stocks and Indices, with emphasis on Technical Analysis",
+          unexpected: "No promises on making money",
         },
         {
           expected:
-            "Focus on learning price-action and simple trading strategy 3",
-          unexpected: "No Portfolio Management at any stage ",
+            "Occassional audio/video updates on our Telegram or Youtube channel",
+          unexpected: "No obligation on number of learning posts",
         },
         {
           expected:
-            "Focus on learning price-action and simple trading strategy 4",
-          unexpected: "No Portfolio Management at any stage ",
+            "Subscription renewal in 30 days",
+          unexpected: "Spoon feeding, learn basic before you join",
         },
         {
-          expected:
-            "Focus on learning price-action and simple trading strategy 5",
-          unexpected: "No Portfolio Management at any stage ",
+          
+          unexpected: "Refund of monthly training fee",
         },
       ],
     };
