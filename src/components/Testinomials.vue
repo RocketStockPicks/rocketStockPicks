@@ -110,7 +110,7 @@ export default {
   display: flex;
   flex-direction: column;
   column-gap: 30px;
-  /* background: rgb(231, 230, 230); */
+  
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 25px;
   min-width: 100vw;
