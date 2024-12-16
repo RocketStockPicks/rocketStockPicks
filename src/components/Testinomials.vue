@@ -71,10 +71,10 @@ export default {
     items: [
       {
         id: "0",
-        name: "Mr. Basaiwala (CA)",
-        img: require("../assets/Nitesh.png"),
+        name: "Mrs. Tiwari (Engg)",
+        img: require("../assets/Tiwari.jpg"),
         testimonial:
-          "Stock selection and highlighting is an niche expertise, and an important element of Rocket Stock Pick. They showcase Results and Value. They highlight the outcomes they deliver and the value to the clients. Happy Investor under their guidance.",
+          "Stock selection and highlighting is an niche expertise, and an important element of RocketStockPicks. They showcase Results and Value. They highlight the outcomes they deliver and the value to the clients. I am a happy investor under their guidance.",
       },
       {
         id: "1",
